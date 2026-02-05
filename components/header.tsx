@@ -37,7 +37,7 @@ export function Header() {
       {/* Main navigation */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <Link href="/" className="relative w-48 h-12 block">
+          <Link href="/" className="relative w-64 h-14 block">
             <Image
               src="/logo.png"
               alt="US Southeast Business Brokers"

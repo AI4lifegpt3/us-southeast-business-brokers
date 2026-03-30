@@ -17,9 +17,30 @@ export function ContactSection() {
     message: ""
   })
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
+  const [phoneError, setPhoneError] = useState("")
+
+  const formatPhone = (value: string) => {
+    const digits = value.replace(/\D/g, "").slice(0, 10)
+
+    return digits.length > 6
+      ? `(${digits.slice(0, 3)}) ${digits.slice(3, 6)}-${digits.slice(6)}`
+      : digits.length > 3
+      ? `(${digits.slice(0, 3)}) ${digits.slice(3)}`
+      : digits.length > 0
+      ? `(${digits}`
+      : ""
+  }
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+    const phoneDigits = formData.phone.replace(/\D/g, "")
+    if (phoneDigits.length > 0 && phoneDigits.length !== 10) {
+      setPhoneError("Please enter a valid 10-digit phone number.")
+      setStatus('idle')
+      return
+    }
+
+    setPhoneError("")
     setStatus('loading')
 
     try {
@@ -141,19 +162,20 @@ export function ContactSection() {
                     type="tel"
                     value={formData.phone}
                     onChange={(e) => {
-                      const digits = e.target.value.replace(/\D/g, '').slice(0, 10)
-                      const formatted = digits.length > 6
-                        ? `(${digits.slice(0,3)}) ${digits.slice(3,6)}-${digits.slice(6)}`
-                        : digits.length > 3
-                        ? `(${digits.slice(0,3)}) ${digits.slice(3)}`
-                        : digits.length > 0
-                        ? `(${digits}`
-                        : ''
+                      const formatted = formatPhone(e.target.value)
                       setFormData({ ...formData, phone: formatted })
+                      const digits = formatted.replace(/\D/g, "")
+                      setPhoneError(digits.length === 0 || digits.length === 10 ? "" : "Please enter a valid 10-digit phone number.")
                     }}
+                    onBlur={() => {
+                      const digits = formData.phone.replace(/\D/g, "")
+                      setPhoneError(digits.length === 0 || digits.length === 10 ? "" : "Please enter a valid 10-digit phone number.")
+                    }}
+                    inputMode="numeric"
                     maxLength={14}
                     placeholder="(555) 123-4567"
                   />
+                  {phoneError ? <p className="mt-2 text-sm text-red-700">{phoneError}</p> : null}
                 </div>
                 <div>
                   <label htmlFor="subject" className="block text-sm font-medium text-foreground mb-2">

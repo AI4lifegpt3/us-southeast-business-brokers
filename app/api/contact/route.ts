@@ -8,6 +8,7 @@ export async function POST(request: NextRequest) {
   try {
     const body = await request.json()
     const { name, email, phone, subject, message } = body
+    const phoneDigits = String(phone || '').replace(/\D/g, '')
 
     if (!name || !email || !subject || !message) {
       return NextResponse.json(
@@ -16,8 +17,18 @@ export async function POST(request: NextRequest) {
       )
     }
 
+    if (phoneDigits.length > 0 && phoneDigits.length !== 10) {
+      return NextResponse.json(
+        { error: 'Please provide a valid 10-digit phone number' },
+        { status: 400 }
+      )
+    }
+
     const timestamp = new Date().toISOString()
-    const formData = { name, email, phone: phone || '', subject, message, timestamp }
+    const normalizedPhone = phoneDigits
+      ? `(${phoneDigits.slice(0, 3)}) ${phoneDigits.slice(3, 6)}-${phoneDigits.slice(6)}`
+      : ''
+    const formData = { name, email, phone: normalizedPhone, subject, message, timestamp }
 
     // 1. Log to Google Sheets via Apps Script webhook
     if (GOOGLE_SHEET_WEBHOOK) {

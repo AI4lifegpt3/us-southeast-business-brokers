@@ -25,9 +25,9 @@ export function StateContact({ state }: { state: string }) {
   }
 
   return (
-    <section id="contact" className="py-24 bg-card">
+    <section id="contact" className="py-16 sm:py-20 md:py-24 bg-card">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-16">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16">
           {/* Contact Info */}
           <div>
             <span className="text-sm font-medium text-primary uppercase tracking-wider">Contact Our {state} Team</span>
@@ -58,7 +58,7 @@ export function StateContact({ state }: { state: string }) {
                 </div>
                 <div>
                   <h3 className="font-semibold text-foreground">Email Us</h3>
-                  <a href="mailto:info@southeastbusinessbrokers.com" className="text-muted-foreground hover:text-primary transition-colors">
+                  <a href="mailto:info@southeastbusinessbrokers.com" className="text-muted-foreground hover:text-primary transition-colors break-all sm:break-normal">
                     info@southeastbusinessbrokers.com
                   </a>
                   <p className="text-sm text-muted-foreground mt-1">We respond within 24 hours</p>
@@ -79,7 +79,7 @@ export function StateContact({ state }: { state: string }) {
           </div>
 
           {/* Contact Form */}
-          <div className="bg-background rounded-2xl p-8 border border-border">
+          <div className="bg-background rounded-2xl p-5 sm:p-8 border border-border">
             <h3 className="font-semibold text-xl text-foreground mb-6">Request a Free Consultation</h3>
             <form onSubmit={handleSubmit} className="space-y-5">
               <div className="grid sm:grid-cols-2 gap-5">

@@ -11,8 +11,8 @@ export function HeroSection() {
         <div className="absolute top-0 right-0 w-1/2 h-full bg-primary/10 rounded-l-full" />
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-24 lg:py-32">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           <div className="space-y-8">
             <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium">
               <span className="w-2 h-2 bg-accent rounded-full" />
@@ -60,7 +60,7 @@ export function HeroSection() {
           {/* Hero image and stats */}
           <div className="relative">
             {/* Main hero image */}
-            <div className="relative w-full h-80 lg:h-96 rounded-2xl overflow-hidden shadow-xl">
+            <div className="relative w-full h-56 sm:h-72 md:h-80 lg:h-96 rounded-2xl overflow-hidden shadow-xl">
               <Image
                 src="/hero-deal.png"
                 alt="Successful business deal - handshake"
@@ -71,8 +71,8 @@ export function HeroSection() {
             </div>
 
             {/* Brad's photo overlay */}
-            <div className="absolute -bottom-8 -left-4 z-10">
-              <div className="relative w-20 h-20 rounded-full overflow-hidden shadow-lg border-4 border-background">
+            <div className="absolute -bottom-6 left-2 sm:-bottom-8 sm:-left-4 z-10">
+              <div className="relative w-16 h-16 sm:w-20 sm:h-20 rounded-full overflow-hidden shadow-lg border-4 border-background">
                 <Image
                   src="/brad-headshot.jpg"
                   alt="Brad - Lead Business Broker"
@@ -83,21 +83,21 @@ export function HeroSection() {
             </div>
 
             {/* Stats row */}
-            <div className="grid grid-cols-4 gap-3 mt-12">
-              <div className="bg-background rounded-xl p-4 shadow-sm border border-border text-center">
-                <p className="font-serif text-2xl font-bold text-primary">500+</p>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-10 sm:mt-12">
+              <div className="bg-background rounded-xl p-3 sm:p-4 shadow-sm border border-border text-center">
+                <p className="font-serif text-xl sm:text-2xl font-bold text-primary">500+</p>
                 <p className="text-xs text-muted-foreground mt-1">Sold</p>
               </div>
-              <div className="bg-background rounded-xl p-4 shadow-sm border border-border text-center">
-                <p className="font-serif text-2xl font-bold text-primary">18+</p>
+              <div className="bg-background rounded-xl p-3 sm:p-4 shadow-sm border border-border text-center">
+                <p className="font-serif text-xl sm:text-2xl font-bold text-primary">18+</p>
                 <p className="text-xs text-muted-foreground mt-1">Years</p>
               </div>
-              <div className="bg-background rounded-xl p-4 shadow-sm border border-border text-center">
-                <p className="font-serif text-2xl font-bold text-primary">98%</p>
+              <div className="bg-background rounded-xl p-3 sm:p-4 shadow-sm border border-border text-center">
+                <p className="font-serif text-xl sm:text-2xl font-bold text-primary">98%</p>
                 <p className="text-xs text-muted-foreground mt-1">Satisfaction</p>
               </div>
-              <div className="bg-primary rounded-xl p-4 text-primary-foreground text-center">
-                <p className="font-serif text-2xl font-bold">2</p>
+              <div className="bg-primary rounded-xl p-3 sm:p-4 text-primary-foreground text-center">
+                <p className="font-serif text-xl sm:text-2xl font-bold">2</p>
                 <p className="text-xs opacity-80 mt-1">States</p>
               </div>
             </div>

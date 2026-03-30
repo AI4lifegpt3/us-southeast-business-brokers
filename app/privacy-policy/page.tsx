@@ -3,8 +3,8 @@ import { Footer } from "@/components/footer"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | US Southeast Business Brokers",
-  description: "Privacy Policy for US Southeast Business Brokers. Learn how we collect, use, and protect your information.",
+  title: "Privacy Policy | Runway Business Brokers",
+  description: "Privacy Policy for Runway Business Brokers. Learn how we collect, use, and protect your information.",
 }
 
 export default function PrivacyPolicyPage() {
@@ -20,7 +20,7 @@ export default function PrivacyPolicyPage() {
             <section className="mb-8">
               <h2 className="text-2xl font-semibold mb-4">Information We Collect</h2>
               <p className="text-muted-foreground mb-4">
-                US Southeast Business Brokers (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) collects information you provide directly to us when you:
+                Runway Business Brokers (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) collects information you provide directly to us when you:
               </p>
               <ul className="list-disc pl-6 text-muted-foreground space-y-2">
                 <li>Fill out our contact form</li>
@@ -68,7 +68,7 @@ export default function PrivacyPolicyPage() {
             <section className="mb-8">
               <h2 className="text-2xl font-semibold mb-4">Your Rights</h2>
               <p className="text-muted-foreground">
-                You may request access to, correction of, or deletion of your personal information at any time by contacting us at info@southeastbusinessbrokers.com or (205) 294-9148.
+                You may request access to, correction of, or deletion of your personal information at any time by contacting us at info@runwaybusinessbrokers.com or (205) 294-9148.
               </p>
             </section>
 
@@ -85,8 +85,8 @@ export default function PrivacyPolicyPage() {
                 If you have any questions about this Privacy Policy, please contact us at:
               </p>
               <p className="text-muted-foreground mt-4">
-                <strong>US Southeast Business Brokers</strong><br />
-                Email: info@southeastbusinessbrokers.com<br />
+                <strong>Runway Business Brokers</strong><br />
+                Email: info@runwaybusinessbrokers.com<br />
                 Phone: (205) 294-9148
               </p>
             </section>

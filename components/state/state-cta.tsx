@@ -4,7 +4,7 @@ import { ArrowRight, Phone } from "lucide-react"
 
 export function StateCTA({ state }: { state: string }) {
   return (
-    <section className="py-24 bg-primary text-primary-foreground">
+    <section className="py-16 sm:py-20 md:py-24 bg-primary text-primary-foreground">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="font-serif text-3xl sm:text-4xl font-bold text-balance">
           Ready to Buy or Sell a Business in {state}?

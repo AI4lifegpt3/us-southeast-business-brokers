@@ -8,9 +8,9 @@ interface StateData {
 
 export function StateCities({ data }: { data: StateData }) {
   return (
-    <section className="py-24 bg-card">
+    <section className="py-16 sm:py-20 md:py-24 bg-card">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-16">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16">
           {/* Cities */}
           <div>
             <div className="flex items-center gap-3 mb-6">

@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react"
 
 export function CTASection() {
   return (
-    <section className="relative py-24 overflow-hidden">
+    <section className="relative py-16 sm:py-20 md:py-24 overflow-hidden">
       {/* Background skyline image */}
       <div className="absolute inset-0">
         <Image

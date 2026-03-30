@@ -35,9 +35,9 @@ const reasons = [
 
 export function StateWhyUs({ state }: { state: string }) {
   return (
-    <section className="py-24 bg-background">
+    <section className="py-16 sm:py-20 md:py-24 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
           <span className="text-sm font-medium text-primary uppercase tracking-wider">Why Choose Us</span>
           <h2 className="font-serif text-3xl sm:text-4xl font-bold text-foreground mt-4 text-balance">
             Why {state} Business Owners Trust Us
@@ -47,7 +47,7 @@ export function StateWhyUs({ state }: { state: string }) {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {reasons.map((reason) => (
             <div 
               key={reason.title}

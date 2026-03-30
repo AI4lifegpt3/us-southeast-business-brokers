@@ -3,8 +3,8 @@ import { Footer } from "@/components/footer"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Terms of Service | US Southeast Business Brokers",
-  description: "Terms of Service for US Southeast Business Brokers. Read our terms and conditions for using our services.",
+  title: "Terms of Service | Runway Business Brokers",
+  description: "Terms of Service for Runway Business Brokers. Read our terms and conditions for using our services.",
 }
 
 export default function TermsOfServicePage() {
@@ -20,14 +20,14 @@ export default function TermsOfServicePage() {
             <section className="mb-8">
               <h2 className="text-2xl font-semibold mb-4">Agreement to Terms</h2>
               <p className="text-muted-foreground">
-                By accessing or using the US Southeast Business Brokers website and services, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our services.
+                By accessing or using the Runway Business Brokers website and services, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our services.
               </p>
             </section>
 
             <section className="mb-8">
               <h2 className="text-2xl font-semibold mb-4">Services Description</h2>
               <p className="text-muted-foreground mb-4">
-                US Southeast Business Brokers provides business brokerage services including, but not limited to:
+                Runway Business Brokers provides business brokerage services including, but not limited to:
               </p>
               <ul className="list-disc pl-6 text-muted-foreground space-y-2">
                 <li>Business sales and acquisitions</li>
@@ -73,14 +73,14 @@ export default function TermsOfServicePage() {
             <section className="mb-8">
               <h2 className="text-2xl font-semibold mb-4">Limitation of Liability</h2>
               <p className="text-muted-foreground">
-                To the fullest extent permitted by law, US Southeast Business Brokers shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or revenues, whether incurred directly or indirectly, or any loss of data, use, goodwill, or other intangible losses.
+                To the fullest extent permitted by law, Runway Business Brokers shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or revenues, whether incurred directly or indirectly, or any loss of data, use, goodwill, or other intangible losses.
               </p>
             </section>
 
             <section className="mb-8">
               <h2 className="text-2xl font-semibold mb-4">Intellectual Property</h2>
               <p className="text-muted-foreground">
-                All content on this website, including text, graphics, logos, and images, is the property of US Southeast Business Brokers and is protected by applicable intellectual property laws. You may not reproduce, distribute, or create derivative works without our express written permission.
+                All content on this website, including text, graphics, logos, and images, is the property of Runway Business Brokers and is protected by applicable intellectual property laws. You may not reproduce, distribute, or create derivative works without our express written permission.
               </p>
             </section>
 
@@ -104,8 +104,8 @@ export default function TermsOfServicePage() {
                 If you have any questions about these Terms of Service, please contact us at:
               </p>
               <p className="text-muted-foreground mt-4">
-                <strong>US Southeast Business Brokers</strong><br />
-                Email: info@southeastbusinessbrokers.com<br />
+                <strong>Runway Business Brokers</strong><br />
+                Email: info@runwaybusinessbrokers.com<br />
                 Phone: (205) 294-9148
               </p>
             </section>

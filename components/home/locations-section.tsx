@@ -19,9 +19,9 @@ const locations = [
 
 export function LocationsSection() {
   return (
-    <section className="py-24 bg-background">
+    <section className="py-16 sm:py-20 md:py-24 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
           <span className="text-sm font-medium text-primary uppercase tracking-wider">Our Locations</span>
           <h2 className="font-serif text-3xl sm:text-4xl font-bold text-foreground mt-4 text-balance">
             Business Brokerage Services by State
@@ -31,11 +31,11 @@ export function LocationsSection() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-6 md:gap-8">
           {locations.map((location) => (
-            <div 
+            <div
               key={location.state}
-              className="bg-card rounded-2xl p-8 border border-border hover:shadow-lg transition-all group"
+              className="bg-card rounded-2xl p-6 sm:p-8 border border-border hover:shadow-lg transition-all group"
             >
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center">

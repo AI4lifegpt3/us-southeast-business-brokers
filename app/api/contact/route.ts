@@ -24,8 +24,8 @@ export async function POST(request: NextRequest) {
     // Example with Resend:
     // const resend = new Resend(process.env.RESEND_API_KEY)
     // await resend.emails.send({
-    //   from: 'US Southeast Business Brokers <noreply@southeastbusinessbrokers.com>',
-    //   to: 'info@southeastbusinessbrokers.com',
+    //   from: 'Runway Business Brokers <noreply@runwaybusinessbrokers.com>',
+    //   to: 'info@runwaybusinessbrokers.com',
     //   replyTo: email,
     //   subject: `New Contact: ${subject}`,
     //   text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone || 'Not provided'}\n\nMessage:\n${message}`

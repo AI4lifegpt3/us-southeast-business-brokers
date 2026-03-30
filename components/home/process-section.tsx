@@ -33,9 +33,9 @@ const steps = [
 
 export function ProcessSection() {
   return (
-    <section className="py-24 bg-card">
+    <section className="py-16 sm:py-20 md:py-24 bg-card">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
           <span className="text-sm font-medium text-primary uppercase tracking-wider">Our Process</span>
           <h2 className="font-serif text-3xl sm:text-4xl font-bold text-foreground mt-4 text-balance">
             How the Selling Process Works
@@ -45,11 +45,11 @@ export function ProcessSection() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {steps.map((step, index) => (
-            <div 
+            <div
               key={step.number}
-              className="relative bg-background rounded-2xl p-8 border border-border group hover:border-primary/30 transition-all"
+              className="relative bg-background rounded-2xl p-6 sm:p-8 border border-border group hover:border-primary/30 transition-all"
             >
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0 w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-bold text-lg">

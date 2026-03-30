@@ -4,8 +4,8 @@ import { Phone, Mail, MapPin } from "lucide-react"
 
 export function Footer() {
   return (
-    <footer className="bg-foreground text-background">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <footer className="bg-foreground text-background overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="lg:col-span-1">
@@ -63,7 +63,7 @@ export function Footer() {
                 <Mail className="h-5 w-5 mt-0.5 opacity-70" />
                 <div>
                   <p className="opacity-70">Email Us</p>
-                  <a href="mailto:info@southeastbusinessbrokers.com" className="hover:opacity-70 transition-opacity">info@southeastbusinessbrokers.com</a>
+                  <a href="mailto:info@southeastbusinessbrokers.com" className="hover:opacity-70 transition-opacity break-all sm:break-normal">info@southeastbusinessbrokers.com</a>
                 </div>
               </li>
               <li className="flex items-start gap-3">

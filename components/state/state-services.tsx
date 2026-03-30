@@ -35,9 +35,9 @@ const services = [
 
 export function StateServices({ state }: { state: string }) {
   return (
-    <section className="py-24 bg-background">
+    <section className="py-16 sm:py-20 md:py-24 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
           <span className="text-sm font-medium text-primary uppercase tracking-wider">Our Services</span>
           <h2 className="font-serif text-3xl sm:text-4xl font-bold text-foreground mt-4 text-balance">
             {state} Business Broker Services
@@ -47,11 +47,11 @@ export function StateServices({ state }: { state: string }) {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {services.map((service) => (
-            <div 
+            <div
               key={service.title}
-              className="group bg-card rounded-2xl p-8 border border-border hover:border-primary/30 hover:shadow-lg transition-all duration-300"
+              className="group bg-card rounded-2xl p-6 sm:p-8 border border-border hover:border-primary/30 hover:shadow-lg transition-all duration-300"
             >
               <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
                 <service.icon className="h-7 w-7 text-primary" />

@@ -42,9 +42,9 @@ export function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0)
 
   return (
-    <section id="faq" className="py-24 bg-card">
+    <section id="faq" className="py-16 sm:py-20 md:py-24 bg-card">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <div className="text-center mb-10 sm:mb-16">
           <span className="text-sm font-medium text-primary uppercase tracking-wider">FAQ</span>
           <h2 className="font-serif text-3xl sm:text-4xl font-bold text-foreground mt-4 text-balance">
             Frequently Asked Questions
@@ -63,7 +63,7 @@ export function FAQSection() {
               <button
                 type="button"
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                className="w-full px-6 py-5 text-left flex items-center justify-between gap-4 hover:bg-muted/50 transition-colors"
+                className="w-full px-4 sm:px-6 py-4 sm:py-5 text-left flex items-center justify-between gap-3 sm:gap-4 hover:bg-muted/50 transition-colors"
               >
                 <span className="font-medium text-foreground">{faq.question}</span>
                 <ChevronDown 
@@ -73,7 +73,7 @@ export function FAQSection() {
                 />
               </button>
               {openIndex === index && (
-                <div className="px-6 pb-5">
+                <div className="px-4 sm:px-6 pb-4 sm:pb-5">
                   <p className="text-muted-foreground leading-relaxed">{faq.answer}</p>
                 </div>
               )}

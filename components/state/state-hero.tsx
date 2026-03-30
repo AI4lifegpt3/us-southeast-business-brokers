@@ -19,8 +19,8 @@ export function StateHero({ data }: { data: StateData }) {
         <div className="absolute top-0 right-0 w-1/2 h-full bg-primary/10 rounded-l-full" />
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-24 lg:py-32">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           <div className="space-y-8">
             <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium">
               <span className="w-2 h-2 bg-accent rounded-full" />
@@ -68,7 +68,7 @@ export function StateHero({ data }: { data: StateData }) {
           {/* Right side: hero image + stats */}
           <div className="space-y-6">
             {data.image && (
-              <div className="relative w-full h-64 lg:h-80 rounded-2xl overflow-hidden shadow-xl">
+              <div className="relative w-full h-48 sm:h-64 lg:h-80 rounded-2xl overflow-hidden shadow-xl">
                 <Image
                   src={data.image}
                   alt={`${data.state} business district`}
@@ -79,17 +79,17 @@ export function StateHero({ data }: { data: StateData }) {
               </div>
             )}
 
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-2 gap-3 sm:gap-4">
               {data.stats.map((stat, index) => (
                 <div
                   key={stat.label}
-                  className={`rounded-2xl p-6 ${
+                  className={`rounded-2xl p-4 sm:p-6 ${
                     index === data.stats.length - 1
                       ? "bg-primary text-primary-foreground"
                       : "bg-background shadow-sm border border-border"
                   }`}
                 >
-                  <p className={`font-serif text-4xl font-bold ${
+                  <p className={`font-serif text-2xl sm:text-3xl lg:text-4xl font-bold ${
                     index === data.stats.length - 1 ? "" : "text-primary"
                   }`}>
                     {stat.value}

@@ -32,6 +32,12 @@ export function ContactSection() {
       if (response.ok) {
         setStatus('success')
         setFormData({ name: "", email: "", phone: "", subject: "", message: "" })
+        // Fire Google Ads conversion
+        if (typeof window !== 'undefined' && (window as any).gtag) {
+          (window as any).gtag('event', 'conversion', { send_to: 'AW-625595884/contact_form' });
+          (window as any).gtag('event', 'conversion', { send_to: 'AW-303410735/contact_form' });
+          (window as any).gtag('event', 'generate_lead', { event_category: 'Contact', event_label: formData.subject });
+        }
       } else {
         setStatus('error')
       }

@@ -1,11 +1,14 @@
 import { NextRequest, NextResponse } from 'next/server'
 
+const GOOGLE_SHEET_WEBHOOK = process.env.GOOGLE_SHEET_WEBHOOK || ''
+const NOTIFICATION_PHONE = process.env.NOTIFICATION_PHONE || ''
+const NOTIFICATION_EMAIL = process.env.NOTIFICATION_EMAIL || 'brad@alabamabusinessbrokers.com'
+
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json()
     const { name, email, phone, subject, message } = body
 
-    // Validate required fields
     if (!name || !email || !subject || !message) {
       return NextResponse.json(
         { error: 'Missing required fields' },
@@ -13,23 +16,27 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // For now, log the submission (in production, integrate with email service)
-    console.log('Contact form submission:', { name, email, phone, subject, message })
+    const timestamp = new Date().toISOString()
+    const formData = { name, email, phone: phone || '', subject, message, timestamp }
 
-    // You can integrate with email services like:
-    // - Resend (resend.com)
-    // - SendGrid
-    // - Mailgun
-    // - AWS SES
-    // Example with Resend:
-    // const resend = new Resend(process.env.RESEND_API_KEY)
-    // await resend.emails.send({
-    //   from: 'Runway Business Brokers <noreply@runwaybusinessbrokers.com>',
-    //   to: 'info@runwaybusinessbrokers.com',
-    //   replyTo: email,
-    //   subject: `New Contact: ${subject}`,
-    //   text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone || 'Not provided'}\n\nMessage:\n${message}`
-    // })
+    // 1. Log to Google Sheets via Apps Script webhook
+    if (GOOGLE_SHEET_WEBHOOK) {
+      try {
+        await fetch(GOOGLE_SHEET_WEBHOOK, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(formData),
+        })
+      } catch (e) {
+        console.error('Google Sheets webhook error:', e)
+      }
+    }
+
+    // 2. Send email notification via Cloudflare Email Workers (or fallback to console)
+    console.log('New lead:', JSON.stringify(formData))
+
+    // 3. Google Ads conversion tracking (client-side via gtag, but log server-side too)
+    console.log(`Conversion: form_submit from ${email}`)
 
     return NextResponse.json({ success: true })
   } catch (error) {

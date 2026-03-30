@@ -140,7 +140,18 @@ export function ContactSection() {
                     id="phone"
                     type="tel"
                     value={formData.phone}
-                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                    onChange={(e) => {
+                      const digits = e.target.value.replace(/\D/g, '').slice(0, 10)
+                      const formatted = digits.length > 6
+                        ? `(${digits.slice(0,3)}) ${digits.slice(3,6)}-${digits.slice(6)}`
+                        : digits.length > 3
+                        ? `(${digits.slice(0,3)}) ${digits.slice(3)}`
+                        : digits.length > 0
+                        ? `(${digits}`
+                        : ''
+                      setFormData({ ...formData, phone: formatted })
+                    }}
+                    maxLength={14}
                     placeholder="(555) 123-4567"
                   />
                 </div>

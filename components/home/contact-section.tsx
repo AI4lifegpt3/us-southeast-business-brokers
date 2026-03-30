@@ -23,7 +23,7 @@ export function ContactSection() {
     setStatus('loading')
 
     try {
-      const response = await fetch('/api/contact', {
+      const response = await fetch('https://abb-form-handler.william-04f.workers.dev', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)
